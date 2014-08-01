@@ -130,7 +130,10 @@
             }
 
             if( value !== existingModelOrCollection ){
-                delegateEvents.call( this, name, existingModelOrCollection, value );
+                // Hoping that commmenting this out prevents event bubbling
+                // (and prevents nothing else).
+                //  Rob N (2014-07-31)
+                //delegateEvents.call( this, name, existingModelOrCollection, value );
             }
 
             return value;
